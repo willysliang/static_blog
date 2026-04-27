@@ -1,0 +1,136 @@
+import{_ as n,o as i,c as s,d as e}from"./app-Bf_tkh-q.js";const l={},a=e(`<h2 id="学海无涯" tabindex="-1"><a class="header-anchor" href="#学海无涯"><span>学海无涯</span></a></h2><h3 id="岗位英文简写" tabindex="-1"><a class="header-anchor" href="#岗位英文简写"><span>岗位英文简写</span></a></h3><ul><li>RD – Research &amp; Develop 研发工程师</li><li>FE – Front End 前端工程师</li><li>BE – Back End 后端工程师</li><li>QA – Quality Assurance 测试工程师</li><li>DBA – Database Administrator 数据库</li><li>PM – Product &amp; Marketing 产品经理</li><li>TS – Technology Support 技术支持</li><li>OP – Operation 运维工程师</li><li>UE(UX) – User Experience 用户体验设计师</li><li>UI – User Interface 用户界面设计师</li><li>UER – User Experience Research 用户研究</li><li>SYS – System</li><li>SCM – Software Configuration Management</li><li>FM – Facility Management</li></ul><h3 id="学习路线" tabindex="-1"><a class="header-anchor" href="#学习路线"><span>学习路线</span></a></h3><ul><li>基础：计算机原理、编译原理、数据结构、算法、设计模式、编程范式等基本知识了解</li><li>语法：JavaScript、ECMAScript、CSS、TypeScript、HTML、Node.js 等语法的了解和使用</li><li>框架：React、Vue、Egg、Koa、Express、Webpack 等原理的了解和使用</li><li>工程：编译工具、格式工具、Git、NPM、单元测试、Nginx、PM2、CI / CD 了解和使用</li><li>网络：HTTP、TCP、UDP、WebSocket、Cookie、Session、跨域、缓存、协议的了解</li><li>性能：编译性能、监控、白屏检测、SEO、Service Worker 等了解</li><li>插件：Chrome 、Vue CLI 、Webpack 等插件设计思路的理解</li><li>系统：Mac、Windows、Linux 系统配置的实践</li><li>后端：Redis 缓存、数据库、Graphql、SSR、模板引擎等了解和使用</li></ul><h3 id="前端体系规划" tabindex="-1"><a class="header-anchor" href="#前端体系规划"><span>前端体系规划</span></a></h3><ul><li>助理前端工程师: 基础编程能力</li><li>前端工程师: 基础前端技能</li><li>资深前端工程师: 组件化、工具、性能优化</li><li>前端专家: 组件体系、工具链、持续集成、性能体系</li><li>高级前端专家：前端体系</li></ul><h2 id="厚积薄发" tabindex="-1"><a class="header-anchor" href="#厚积薄发"><span>厚积薄发</span></a></h2><h4 id="【内聚】" tabindex="-1"><a class="header-anchor" href="#【内聚】"><span>【内聚】</span></a></h4><div class="language-bash line-numbers-mode" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token comment">## 描述</span>
+内聚（Cohesion），科学名词，是一个模块内部各成分之间相关联程度的度量。
+内聚的概念是Constantine、Yourdon、Stevens等人提出的。按他们的观点，把内聚按紧密程度从低到高排列次序为偶然内聚、逻辑内聚、时间内聚、过程内聚、通信内聚、顺序内聚、功能内聚。但是紧密程度的增长是非线性的。偶然内聚和逻辑内聚的模块联系松散，后面几种内聚相差不多，功能内聚一个功能、独立性强、内部结构紧密，是最理想的内聚。
+
+
+<span class="token comment">## 分类</span>
+内聚按强度从低到高有以下几种类型：
+<span class="token number">1</span>. 偶然内聚
+如果一个模块的各成分之间毫无关系，则称为偶然内聚，也就是说模块完成一组任务，这些任务之间的关系松散，实际上没有什么联系。
+
+<span class="token number">2</span>. 逻辑内聚
+几个逻辑上相关的功能被放在同一模块中，则称为逻辑内聚。如一个模块读取各种不同类型外设的输入。尽管逻辑内聚比偶然内聚合理一些，但逻辑内聚的模块各成分在功能上并无关系，即使局部功能的修改有时也会影响全局，因此这类模块的修改也比较困难。
+
+<span class="token number">3</span>. 时间内聚
+如果一个模块完成的功能必须在同一时间内执行（如系统初始化），但这些功能只是因为时间因素关联在一起，则称为时间内聚。
+
+<span class="token number">4</span>. 过程内聚
+构件或者操作的组合方式是，允许在调用前面的构件或操作之后，马上调用后面的构件或操作，即使两者之间没有数据进行传递。
+模块完成多个需要按一定的步骤一次完成的功能。（过程相关---控制耦合）。例如：在用程序流程图设计模块时，若将程序流程图中的一部分划出各自组成模块，便形成过程内聚。
+
+<span class="token number">5</span>. 通信内聚（信息内聚）
+如果一个模块的所有成分都操作同一数据集或生成同一数据集，则称为通信内聚。
+模块完成多个功能，各个功能都在同一数据结构上操作，这个模块的所有功能都是基于同一个数据结构（符号表），因此，它是一个信息内聚的模块。
+
+<span class="token number">6</span>. 顺序内聚
+如果一个模块的各个成分和同一个功能密切相关，而且一个成分的输出作为另一个成分的输入，则称为顺序内聚。
+
+<span class="token number">7</span>. 功能内聚
+模块的所有成分对于完成单一的功能都是必须的，则称为功能内聚。
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="项目类需求与产品类需求的区别" tabindex="-1"><a class="header-anchor" href="#项目类需求与产品类需求的区别"><span>项目类需求与产品类需求的区别</span></a></h4><table><thead><tr><th>特性</th><th>项目类需求</th><th>产品类需求</th></tr></thead><tbody><tr><td>目标</td><td>完成特定的任务或项目</td><td>持续改进和发展产品</td></tr><tr><td>时间限制</td><td>有明确的开始和结束时间</td><td>长期、持续性的，没有明确的结束时间</td></tr><tr><td>预算限制</td><td>有固定的预算，需要在预算内完成</td><td>持续投入，通常有长期的资金和资源规划</td></tr><tr><td>用户驱动</td><td>通常不是</td><td>是</td></tr><tr><td>风险管理</td><td>需要详尽的风险管理</td><td>持续的风险评估和管理</td></tr><tr><td>迭代发布</td><td>通常一次性发布</td><td>通过多个版本迭代发布</td></tr><tr><td>案例</td><td>广告着陆页、定制化系统</td><td>对一个系统(产品)不断迭代与维护</td></tr></tbody></table><h2 id="书山有路" tabindex="-1"><a class="header-anchor" href="#书山有路"><span>书山有路</span></a></h2><h4 id="《西游团队裁员》" tabindex="-1"><a class="header-anchor" href="#《西游团队裁员》"><span>《西游团队裁员》</span></a></h4><div class="language-bash line-numbers-mode" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token comment">## 西游记团队中需要裁掉一个人，你会裁掉谁？</span>
+从角色定位、核心价值和团队目标的贡献度来衡量分析，确保取经任务以最小风险继续推进。
+
+<span class="token number">1</span>. 唐僧：不可替代的领导者
+核心价值：作为取经项目的唯一法人代表，他是团队存在的意义。没有他，取经任务直接失效。
+缺点：战斗力为零，且常因善心误事，但他是如来、观音指定的核心人物，无法裁撤。
+
+裁唐僧 —— 极端假设下的革命性重组
+前提：若取经任务并非必须由唐僧完成（如来默认替代者），团队可彻底重构。
+优势：
+	效率提升：悟空可一个筋斗云直达灵山取经，耗时从14年缩短至几分钟。
+	规避风险：唐僧的善心误事（如红孩儿、白骨精事件）将被根除。
+障碍：
+	合法性崩塌：如来钦定唐僧为取经人，团队存在的基础是护送唐僧，裁他即任务失败。
+	佛理矛盾：取经本质是修行，结果（经书）不如过程（磨难）重要，裁唐僧等于否定核心意义。
+隐喻：唐僧代表制度化的权威，裁他意味着打破程序正义，但西游记的深层逻辑是权威不可挑战（如悟空始终逃不出如来掌心），次方案在原著宇宙中不可行，却是对体制的辛辣反讽。
+
+
+
+<span class="token number">2</span>. 孙悟空：核心执行者
+核心价值：解决团队80%以上的难题，战斗力、智谋和资源（如请神仙相助）无可替代。
+缺点：冲动易怒，但团队完全依赖他的能力推进任务，裁他等同于任务失败。
+
+裁孙悟空 —— 冒险主义的去能力化
+优势：
+	倒逼团队成长：八戒、沙僧被迫提升战力，白龙马化人性参战。
+	减少内部冲突：悟空与唐僧的理念矛盾（杀生VS慈悲）消失，团队更和谐。
+致命缺陷：
+	战力真空：团队无法通过至少20次关键难关（如狮驼岭、金翅大展鹏）
+	外部依赖：观音等神佛干预频率激增，取经从修行沦为走过场。
+佐证：三打白骨精后悟空被逐，团队立刻遭遇黄袍怪惨败，唐僧变虎，八戒被迫请回悟空。证明去悟空化必然失败。
+
+
+
+<span class="token number">3</span>. 猪八戒：矛盾的调和者与功能补充
+核心价值：
+	战斗力：虽不如悟空，但能分担战斗压力（如对付水妖）
+	团队润滑剂：插科打诨缓解紧张氛围，调和悟空与唐僧的矛盾。
+	世俗智慧：在人情世故（如化缘、交涉）上补足唐僧和悟空的不足。
+缺点：懒惰好色，但贡献的多样性使其难以被完全替代。
+
+裁猪八戒 —— 功利主义的效率优先
+优势：
+	消除内耗：八戒的懒惰、挑唆（如三打白骨精时煽动唐僧念咒）减少团队分裂风险。
+	资源节约：八戒食量惊人，裁他可降低化缘压力。
+隐性成本：
+	情绪价值丧失：团队压抑指数上升，唐僧的焦虑与悟空的暴戾无缓冲（心理学中的压力阀效应）
+	功能性缺口：水战短板（八戒曾胜沙僧、九头虫）与外交任务（如与女性角色周旋）无人填补。
+文化符号冲突：八戒代表人性欲望，裁他等于追求无欲修行，但佛教主张直面欲望而非消灭。此方案违背取经的修行本意。
+
+
+
+<span class="token number">4</span>. 白龙马
+核心价值：白龙马常被视为工具，其人形战力（如碗子山救唐僧）与西海龙王家族资源（调用水族情报）有战略价值。
+
+裁白龙马 —— 隐藏角色的资源优化
+优势：唐僧可改成普通马匹，或由沙僧背负（四圣试禅心时沙僧提议背唐僧过河）
+风险：
+	关键时刻无备援：如朱紫国救金圣宫娘娘需白龙马尿制药，此类冷门功能无法替代。
+	政治代价：西海龙王系天庭重要势力，裁白龙马可能引发外交纠纷。
+
+
+
+<span class="token number">5</span>. 沙僧：后勤保障者
+核心价值：负责看守行李、照顾唐僧起居，维持团队基本运转。
+致命短板：
+	可替代性高：后勤工作可由白龙马或八戒兼任（原著中八戒常挑担，沙僧牵马）
+	战略价值低：在关键剧情中极少主动解决问题，更多是跟随者和旁观者。
+	角色重复：作为忠诚执行者，其定位与唐僧的鉴定、悟空的行动力部分重叠，缺乏不可替代的独特价值。
+
+裁沙僧 —— 最不起眼的执行者
+现实角度：沙僧的工作（如挑担、护师）可由他人分担，且他对团队突破难关的贡献最小。
+象征角度：西游记本身通过角色分工隐喻管理：领导者<span class="token punctuation">(</span>唐僧<span class="token punctuation">)</span>、创新者<span class="token punctuation">(</span>悟空<span class="token punctuation">)</span>、协调者<span class="token punctuation">(</span>八戒<span class="token punctuation">)</span>不可或者，而纯粹的执行者<span class="token punctuation">(</span>沙僧<span class="token punctuation">)</span>在资源有限时最易被优化。
+原著暗示：作者对沙僧着墨最少，侧面反映其角色功能性较弱。
+
+
+若必须裁员，沙僧最合理。他的离开不会动摇团队根基，反而可能促使剩余成员更高效协作（如八戒承担后勤、白龙马化人形协助），而保留其他三人，能确保取经的核心目标、战斗力与团队凝聚力不受致命影响。
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="「价值可见性」" tabindex="-1"><a class="header-anchor" href="#「价值可见性」"><span>「价值可见性」</span></a></h4><div class="language-bash line-numbers-mode" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token comment">## 系统太稳定了，甲方觉得我们没有工作量，怎么收运维费？</span>
+首先，甲方不是不想给，是得把钱给的有名目
+你想啊，他100w的系统，一年10%的运维费就是10w块
+最后年底他和老板汇报，老板问他这10w花哪里了?
+他说买了份报告，然后处理了两次停机都是线上搞定的
+这老板肯定觉得钱有点白花的感觉
+但是，如果你每年加两次巡检呢?一次巡检一份报告呢?
+如果你再每年来一次两天的培训呢?
+他再汇报的时候，就可以说通过巡检发现了X个可能的漏洞，全年没有造成停机
+通过培训了解了系统X个新特性，预计可以节省X个人天每年
+你看这么说他还愿不愿意出?
+
+
+当甲方质疑时，用「损失锚定法」回应：
+“X总，咱们系统今年0事故，其实意味着我们：
+✅ 提前解决了XX个高危隐患（展示告警日志）
+✅ 优化XX处性能瓶颈（对比优化前后指标）
+如果降级为基础运维，按行业事故概率（附报告）：
+🔸 明年有72%概率发生≥2次故障
+🔸 预估直接损失¥XXX万 + 品牌损伤
+当前投入仅是潜在损失的 _%”_
+
+
+📊 核心思路：从<span class="token string">&#39;解决问题&#39;</span>转为<span class="token string">&#39;预防问题&#39;</span>和<span class="token string">&#39;创造价值&#39;</span>
+🗣️ <span class="token number">1</span>. 主动沟通，定期价值报告📈（价值可视化）
+🔧 <span class="token number">2</span>. 调整服务模式与定价结构（价值绑定）
+🤝 <span class="token number">3</span>. 加强与甲方的合作与教育（价值共识）
+📝 <span class="token number">4</span>. 合同与服务协议的优化（价值保障）
+💡 <span class="token number">5</span>. 展现前瞻性与技术兜底（价值延伸）
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,17),d=[a];function v(r,c){return i(),s("div",null,d)}const u=n(l,[["render",v],["__file","格物致知.html.vue"]]),m=JSON.parse('{"path":"/%E5%AD%A6%E6%B5%B7%E6%97%A0%E6%B6%AF/%E6%A0%BC%E7%89%A9%E8%87%B4%E7%9F%A5.html","title":"","lang":"zh-CN","frontmatter":{"Author":"willysliang","CreateTime":"2023-11-29T10:27:23.000Z","Modifier":"willysliang","ModifiedTime":"2025-05-08T15:48:49.000Z","Description":"格物致知"},"headers":[{"level":2,"title":"学海无涯","slug":"学海无涯","link":"#学海无涯","children":[{"level":3,"title":"岗位英文简写","slug":"岗位英文简写","link":"#岗位英文简写","children":[]},{"level":3,"title":"学习路线","slug":"学习路线","link":"#学习路线","children":[]},{"level":3,"title":"前端体系规划","slug":"前端体系规划","link":"#前端体系规划","children":[]}]},{"level":2,"title":"厚积薄发","slug":"厚积薄发","link":"#厚积薄发","children":[]},{"level":2,"title":"书山有路","slug":"书山有路","link":"#书山有路","children":[]}],"git":{"updatedTime":1751945928000,"contributors":[{"name":"willy","email":"willysliang@qq.com","commits":2}]},"filePathRelative":"学海无涯/格物致知.md"}');export{u as comp,m as data};
